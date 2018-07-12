@@ -10,7 +10,7 @@ class Socket{
 	ioConfig()
 	{
 		this.io.use((socket,next)=>{
-			socket['id'] = socket.handshake.query.user_id;
+			socket['id'] = 'user_'+socket.handshake.query.user_id;
 			console.log(socket.id);
 			next();
 		});
@@ -19,10 +19,16 @@ class Socket{
 	socketConnection()
 	{
 		
- 		this.ioConfig();
+ 		 this.ioConfig();
 
 		this.io.on('connection',(socket)=>{
-			console.log('a new visitor here as session id => ',socket.id);
+		 	//console.log(this.io.sockets.clients());	
+		    //console.log('a new visitor here as session id => ',socket.id);
+		   	
+		    socket.broadcast.emit('online_user',{
+		    	socket_id:socket.id
+		    });
+
 			this.socketDisconnect(socket); // DisConnect User List
 		});
 	}

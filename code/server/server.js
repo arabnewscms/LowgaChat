@@ -21,7 +21,7 @@ class Server{
 	{
 
 		new SocketServer(this.socket).socketConnection(); // This Is socket Class
-
+		
 
 		/* Listening A node Js Server */
 		this.http.listen(this.port,this.host,()=>{

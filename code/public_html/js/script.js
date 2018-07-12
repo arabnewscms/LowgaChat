@@ -4,8 +4,21 @@ $(document).ready(function(){
    			query:'user_id='+user_id+'&username='+username
    		});
 
+   		socket.on('online_user',function(data){
+   		 $('.'+data.socket_id).addClass('online');
+   		});
 
-
+   		
+   		var user_list = [];
+   		 $('.user').each(function(){
+   		 	var uid = $(this).attr('uid');
+   		 	user_list.push(uid);
+   		 });
+   		  socket.emit('check_online',{
+   		  	data:user_list
+   		  });
+   		  
+   		   
 	 var arr = []; // List of users	
 	
 	$(document).on('click', '.msg_head', function() {	
@@ -25,7 +38,7 @@ $(document).ready(function(){
 	
 	$(document).on('click', '#sidebar-user-box', function() {
 	
-	 var userID = $(this).attr("tmpid");
+	 var userID = $(this).attr("uid");
 	 var username = $(this).children().text() ;
 	 
 	 if ($.inArray(userID, arr) != -1)
