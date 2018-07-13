@@ -1,0 +1,157 @@
+/**** Chat Popup Layout******/
+body{
+	background:#e5e5e5;	
+	font-family: sans-serif;
+}
+
+.msg_box{
+	position:fixed;
+	bottom:-5px;
+	width:250px;
+	background:white;
+	border-radius:5px 5px 0px 0px;
+}
+
+.msg_head{	
+	background:black;
+	color:white;
+	padding:8px;
+	font-weight:bold;
+	cursor:pointer;
+	border-radius:5px 5px 0px 0px;
+}
+
+.msg_body{
+	background:white;
+	height:200px;
+	font-size:12px;
+	padding:15px;
+	overflow:auto;
+	overflow-x: hidden;
+}
+.msg_input{
+	width:100%;
+	height: 55px;
+	border: 1px solid white;
+	border-top:1px solid #DDDDDD;
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box;   
+	box-sizing: border-box;  
+}
+
+.close{
+	float:right;
+	cursor:pointer;
+}
+.minimize{
+	float:right;
+	cursor:pointer;
+	padding-right:5px;
+	
+}
+
+.msg-left{
+	position:relative;
+	background:#e2e2e2;
+	padding:5px;
+	min-height:10px;
+	margin-bottom:5px;
+	margin-right:10px;
+	border-radius:5px;
+	word-break: break-all;
+}
+
+.msg-right{
+	background:#d4e7fa;
+	padding:5px;
+	min-height:15px;
+	margin-bottom:5px;
+	position:relative;
+	margin-left:10px;
+	border-radius:5px;
+	word-break: break-all;
+}
+/**** Slider Layout Popup *********/
+
+ #chat-sidebar {
+     width: 250px;
+     position: relative;
+     height: 100%;
+     right: 0px;
+     top: 0px;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     border: 1px solid #b2b2b2;
+}
+ #sidebar-user-box {
+     padding: 4px;
+     margin-bottom: 4px;
+     font-size: 15px;
+     font-family: Calibri;
+     font-weight:bold;
+     cursor:pointer;
+}
+ #sidebar-user-box:hover {
+     background-color:#999999 ;
+}
+ #sidebar-user-box:after {
+     content: ".";
+     display: block;
+     height: 0;
+     clear: both;
+     visibility: hidden;
+}
+ img{
+     width:35px;
+     height:35px;
+     border-radius:50%;
+     float:left;
+}
+ #slider-username{
+     float:left;
+     line-height:30px;
+     margin-left:5px;
+}
+ 
+ .user_status{
+	float: right;
+padding: 7px;
+position: relative;
+right: 0;
+top: 10px;
+display: inline-block;
+width: 10px;
+height: 10px;
+line-height: 1;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+border-radius: 50px;
+ }
+
+.online{
+	color: #fff;
+background-color: #090;
+}
+
+
+.offline{
+color: #fff;
+background-color: gray;
+}
+
+.dnd{
+color: #fff;
+background-color: #c33;
+}
+
+.bys{
+color: #fff;
+background-color: orange;
+}
+
+
+
+
+
+
